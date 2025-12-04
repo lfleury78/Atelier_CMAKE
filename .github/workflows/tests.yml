@@ -125,7 +125,7 @@ jobs:
           uses: actions/upload-artifact@v4
           with:
             name: test-square-report
-            path: build/report.txt      # <-- le fichier à récupérer
+            path: build/report_square.txt      # <-- le fichier à récupérer
             retention-days: 14          # optionnel
 
         - name: Job summary (facultatif mais pratique)
@@ -133,5 +133,5 @@ jobs:
             echo "### Résultat du test *square*" >> $GITHUB_STEP_SUMMARY
             echo '' >> $GITHUB_STEP_SUMMARY
             echo '' >> $GITHUB_STEP_SUMMARY
-            cat build/report.txt >> $GITHUB_STEP_SUMMARY
+            cat build/report_square.txt >> $GITHUB_STEP_SUMMARY
             echo '' >> $GITHUB_STEP_SUMMARY
