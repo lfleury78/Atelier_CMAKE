@@ -117,8 +117,8 @@ jobs:
           run: |
             cd build
             set -e
-            echo "== Test square 10 5 ==" > report_square.txt
-            ./src/calculator square 10 5 | tee -a report_square.txt
+            echo "== Test square 5 ==" > report_square.txt
+            ./src/calculator square 5 | tee -a report_square.txt
             echo "Exit code: $?" >> report_square.txt
 
         - name: Upload report as artifact
